@@ -1,13 +1,7 @@
+import {Search} from 'lucide-react';
 import './App.css';
-import {CircleUserRound} from 'lucide-react';
-import {LogOut} from 'lucide-react';
-import {SquareUserRound} from 'lucide-react';
-import {Home} from 'lucide-react';
-import {StickyNote} from 'lucide-react';
-import {ChevronDown} from 'lucide-react';
 
 function App() {
-
   return (
   <div className="font-Inter">
     <header className="h-[130px] bg-white drop-shadow-lg">
@@ -17,54 +11,35 @@ function App() {
         </div>
 
         <div className="flex flex-row gap-10 pr-16">
-          <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
-            <CircleUserRound/>
-            <p className="text-lg">Meus Dados</p>
-          </button>
-          <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
-            <LogOut />
-            <p className="text-lg">Sair</p>
+          <div class="bg-gray-300 w-24 h-7"></div>
+          <div class="bg-gray-300 w-24 h-7"></div>
+          <div class="bg-gray-300 w-24 h-7"></div>
+          <div class="bg-gray-300 w-24 h-7"></div>
+          <div class="bg-gray-300 w-24 h-7"></div>
+          <button>
+          <Search />
           </button>
         </div>
       </div>
     </header>
 
-    <div className="grid grid-cols-2">
-      <div className="col-span-1 w-[330px] h-[33rem] bg-[#10439F] text-white">
-        <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
-          <button>
-            <SquareUserRound  size={80}/>
-          </button>
-          <div>
-            <button className='text-lg mt-4 hover:bg-gray-400 rounded hover:text-slate-600'>
-              Nome do Fiscal
-            </button>
-            <p>Matricula: 000000</p>
+    <div className="bg-slate-300 w-full h-full flex flex-row gap-20 justify-center items-center pt-10 pb-[73px]">
+
+      <div className= "w-[25rem] h-[29.5rem] bg-white drop-shadow-lg px-5 flex flex-col">
+          <h1 className="text-center pt-7 text-xl pb-7">Indentifique-se na Secretaria de Educação</h1>
+          <p className="text-[#074173] pl-8 text-lg">E-mail ou Matricula</p>
+          <div className="flex flex-wrap justify-center items-center pb-7">
+            <input type='textarea' placeholder='Digite seu e-mail ou matricula' className='max-w-full w-80 text-[#878787] rounded-md border border-gray-500 py-3 pl-4'></input>
           </div>
-        </div>
-        <div className="flex flex-col">
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <Home />
-            <p>Tela de início</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
-          </button>
-        </div>
-      </div>
-
-      <div className="col-span-1">
-
+          <p className="text-[#074173] pl-8 text-lg">Senha</p>
+          <div className="flex flex-wrap justify-center items-center">
+            <input type='textarea' placeholder='Digite sua senha' className='max-w-full w-80 text-[#878787] rounded-md border border-gray-500 py-3 pl-4'></input>
+          </div>
+          <div className="flex flex-col content-center justify-center gap-5">
+            <button className="text-center pt-2 text-[#074173] hover:text-[#022c4f] text-sm w-36 mx-28">Esqueci minha senha</button>
+            <button className="flex flex-wrap items-center justify-center text-white text-lg bg-[#074173] hover:bg-[#022c4f] w-28 mx-32 py-2 rounded-md">Entrar</button>
+          </div>
+        <button className="text-start text-[#074173] hover:text-[#022c4f] text-sm pt-5">Não possui cadastro? Cadastre-se agora!</button>
       </div>
     </div>
   </div>
