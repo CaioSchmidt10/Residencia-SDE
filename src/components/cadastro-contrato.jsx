@@ -6,7 +6,7 @@ import {Home} from 'lucide-react';
 import {StickyNote} from 'lucide-react';
 import {ChevronDown} from 'lucide-react';
 
-function App() {
+export default function CadastroContrato() {
 
   return (
   <div className="font-Inter">
@@ -167,5 +167,3 @@ function App() {
   </div>
   );
 }
-
-export default App;
