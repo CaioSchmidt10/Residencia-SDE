@@ -1,4 +1,3 @@
-import './App.css';
 import {CircleUserRound} from 'lucide-react';
 import {LogOut} from 'lucide-react';
 import {SquareUserRound} from 'lucide-react';
@@ -30,7 +29,7 @@ export default function CadastroContrato() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] h-[36.55rem] bg-blue-950 text-white">
+      <div className="w-[330px] h-screen bg-blue-950 text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -64,7 +63,7 @@ export default function CadastroContrato() {
       </div>
 
       <div className="flex-grown bg-slate-400 px-7 py-5 w-full">
-        <h1 className="text-center font-bold text-4xl pb-6">Adicionar Contrato</h1>
+        <h1 className="text-start font-bold text-4xl pb-6">Adicionar Contrato</h1>
         <div className="flex flex-row">
           <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2 focus:bg-[#E5E5E5]">
             <p className="font-bold">Dados do Contrato</p>

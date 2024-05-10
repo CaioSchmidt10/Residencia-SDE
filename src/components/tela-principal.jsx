@@ -1,4 +1,3 @@
-import './App.css';
 import {CircleUserRound} from 'lucide-react';
 import {LogOut} from 'lucide-react';
 import {SquareUserRound} from 'lucide-react';

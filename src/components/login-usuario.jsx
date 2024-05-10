@@ -1,6 +1,6 @@
 import {Search} from 'lucide-react';
 
-function App() {
+export default function LoginUsuario () {
   return (
   <div className="font-Inter">
     <header className="h-[130px] bg-white drop-shadow-lg">
@@ -23,8 +23,6 @@ function App() {
     </header>
 
     <div className="bg-slate-300 w-full h-full flex flex-row gap-20 justify-center items-center pt-10 pb-[73px]">
-      <div className="w-[25rem] h-[29.5rem] bg-[#D9D9D9] drop-shadow-lg ">
-      </div>
 
       <div className= "w-[25rem] h-[29.5rem] bg-white drop-shadow-lg px-5 flex flex-col">
           <h1 className="text-center pt-7 text-xl pb-7">Indentifique-se na Secretaria de Educação</h1>
@@ -46,5 +44,3 @@ function App() {
   </div>
   );
 }
-
-export default App;
