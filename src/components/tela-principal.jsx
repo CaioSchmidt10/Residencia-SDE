@@ -77,7 +77,7 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">2</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
               <button className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">5</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 ">
               <button className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">9</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
               <button className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">5</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
               <button className="w-full text-white py-2">Ver Avisos e Notificações</button>
             </div>
           </div>
