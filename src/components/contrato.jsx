@@ -6,9 +6,14 @@ import {StickyNote} from 'lucide-react';
 import {ChevronDown} from 'lucide-react';
 import {CirclePlus} from 'lucide-react';
 import {Search} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contrato() {
 
+  const navigate = useNavigate();
+  const trocarTela = () => navigate("/CadastroContrato");
+  const trocarTelaSair = () => navigate("/LoginUsuario")
+  
   return (
   <div className="font-Inter">
     <header className="h-[130px] bg-white drop-shadow-xl">
@@ -22,7 +27,9 @@ export default function Contrato() {
             <CircleUserRound/>
             <p className="text-lg">Meus Dados</p>
           </button>
-          <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
+          <button 
+            onClick={trocarTelaSair}
+            className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
             <LogOut />
             <p className="text-lg">Sair</p>
           </button>
@@ -71,7 +78,9 @@ export default function Contrato() {
         </div>
         <div className="flex justify-between">
           <div>
-            <button className="flex flex-row gap-3 bg-[#074173] text-white py-2 px-1 rounded">
+            <button
+              onClick={trocarTela} 
+              className="flex flex-row gap-3 bg-[#074173] text-white py-2 px-1 rounded">
               <CirclePlus strokeWidth={1.5} />
               <p>Adicionar Contrato</p>
             </button>

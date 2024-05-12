@@ -4,8 +4,12 @@ import {SquareUserRound} from 'lucide-react';
 import {Home} from 'lucide-react';
 import {StickyNote} from 'lucide-react';
 import {ChevronDown} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function TelaPrincipal() {
+
+  const navigate = useNavigate();
+  const trocarTelaSair = () => navigate("/LoginUsuario")
 
   return (
   <div className="font-Inter">
@@ -20,7 +24,9 @@ export default function TelaPrincipal() {
             <CircleUserRound/>
             <p className="text-lg">Meus Dados</p>
           </button>
-          <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
+          <button
+          onClick={trocarTelaSair} 
+          className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
             <LogOut />
             <p className="text-lg">Sair</p>
           </button>

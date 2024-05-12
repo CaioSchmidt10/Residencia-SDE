@@ -1,6 +1,10 @@
 import {Search} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CadastroUsuario() {
+  const navigate = useNavigate();
+  const trocarTelaLogin = () => navigate("/LoginUsuario")
+  const trocarTelaPrincipal = () => navigate("/TelaPrincipal")
 
   return (
   <div className="font-Inter">
@@ -56,11 +60,15 @@ export default function CadastroUsuario() {
       </div>
 
       <div className="bg-white w-3/4 rounded-sm flex justify-between items-center drop-shadow-lg mb-5 px-20 pb-5">
-        <button className="text-[#074173] text-lg hover:text-[#022c4f]">
+        <button 
+        onClick={trocarTelaLogin}
+        className="text-[#074173] text-lg hover:text-[#022c4f]">
           Já possui conta?
         </button>
 
-        <button className="bg-[#074173] text-white px-5 py-2 rounded text-lg hover:bg-[#022c4f]">
+        <button 
+        onClick={trocarTelaPrincipal}
+        className="bg-[#074173] text-white px-5 py-2 rounded text-lg hover:bg-[#022c4f]">
           Cadastrar
         </button>
       </div>
