@@ -4,7 +4,8 @@ import TelaPrincipal from "./components/tela-principal";
 import CadastroUsuario from "./components/cadastro-usuario";
 import LoginUsuario from "./components/login-usuario";
 import Contrato from "./components/contrato";
-import CadastroContrato from "./components/cadastro-contrato"
+import CadastroContrato from "./components/cadastro-contrato";
+import CaracteristicasContrato from "./components/caracteristicas-contrato";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/TelaPrincipal' element={<TelaPrincipal/>}/>
         <Route exact path='/Contrato' element={<Contrato/>}/>
         <Route exact path='/CadastroContrato' element={<CadastroContrato/>}/>
+        <Route exact path='/CaracteristicasContrato' element={<CaracteristicasContrato/>}/>
       </Routes>
     </Router>
   </div>

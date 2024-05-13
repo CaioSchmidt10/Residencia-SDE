@@ -81,7 +81,7 @@ export default function Contrato() {
           </div>
           <div className="flex flex-row gap-3">
             <Search strokeWidth={1.5} />
-            <input type='textarea' placeholder='Pesquisar...' className="rounded mb-2 pl-3 border border-[#575757] text-[#575757]"></input>
+            <input type='textarea' placeholder='Pesquisar...' className="rounded-lg mb-2 pl-3 border border-[#575757] text-[#575757]"></input>
           </div>
         </div>
 
