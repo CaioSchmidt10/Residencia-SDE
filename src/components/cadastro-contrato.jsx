@@ -1,15 +1,11 @@
-import {CircleUserRound} from 'lucide-react';
-import {LogOut} from 'lucide-react';
-import {SquareUserRound} from 'lucide-react';
-import {Home} from 'lucide-react';
-import {StickyNote} from 'lucide-react';
-import {ChevronDown} from 'lucide-react';
+import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function CadastroContrato() {
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
+  const trocarTelaCancelar = () => navigate("/Contrato")
 
   return (
   <div className="font-Inter">
@@ -79,7 +75,7 @@ export default function CadastroContrato() {
           </button>
         </div>
         <div className="bg-[#D9D9D9] rounded-b-lg border border-black px-10 py-4">
-          <div className="flex flex-row gap-44">
+          <div className="flex flex-row justify-between ">
             <div className="grid grid-cols-2 gap-x-16 gap-y-2">
               <div>
                 <p className="font-bold text-sm ml-2">Número do contrato *</p>
@@ -156,7 +152,7 @@ export default function CadastroContrato() {
               <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2 w-[500px]"></input>
             </div>
 
-            <div className="pr-3">
+            <div>
               <p className="font-bold text-sm ml-2">Telefone do Fiscal *</p>
               <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
             </div>
@@ -164,7 +160,11 @@ export default function CadastroContrato() {
         </div>
 
         <div className="flex flex-row justify-end gap-5 pt-4">
-          <button className="bg-[#878787] hover:bg-gray-600 text-white py-3 px-5 rounded-lg font-bold">Cancelar</button>
+          <button 
+          onClick={trocarTelaCancelar}
+          className="bg-[#878787] hover:bg-gray-600 text-white py-3 px-5 rounded-lg font-bold">
+            Cancelar
+          </button>
           <button className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Próximo</button>
         </div>
       </div>

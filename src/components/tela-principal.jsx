@@ -1,15 +1,11 @@
-import {CircleUserRound} from 'lucide-react';
-import {LogOut} from 'lucide-react';
-import {SquareUserRound} from 'lucide-react';
-import {Home} from 'lucide-react';
-import {StickyNote} from 'lucide-react';
-import {ChevronDown} from 'lucide-react';
+import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function TelaPrincipal() {
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
+  const trocarTelaContrato = () => navigate("/Contrato")
 
   return (
   <div className="font-Inter">
@@ -84,7 +80,9 @@ export default function TelaPrincipal() {
               </div>
             </div>
             <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
-              <button className="w-full text-white py-2">Ver Contratos</button>
+              <button 
+              onClick={trocarTelaContrato}
+              className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
 

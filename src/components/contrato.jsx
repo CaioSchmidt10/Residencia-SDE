@@ -1,11 +1,5 @@
-import {CircleUserRound} from 'lucide-react';
-import {LogOut} from 'lucide-react';
-import {SquareUserRound} from 'lucide-react';
-import {Home} from 'lucide-react';
-import {StickyNote} from 'lucide-react';
-import {ChevronDown} from 'lucide-react';
-import {CirclePlus} from 'lucide-react';
-import {Search} from 'lucide-react';
+import {CircleUserRound, Search, CirclePlus, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
+
 import { useNavigate } from 'react-router-dom';
 
 export default function Contrato() {
@@ -38,7 +32,7 @@ export default function Contrato() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] h-[36.55rem] bg-blue-950 text-white">
+      <div className="w-[29%] h-[36.55rem] bg-blue-950 text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -71,7 +65,7 @@ export default function Contrato() {
         </div>
       </div>
 
-      <div className="flex-grown bg-slate-400 px-7 py-5 w-full">
+      <div className=" bg-slate-400 px-7 py-5 w-screen">
         <div className="flex flex-row gap-6">
           <h1 className="text-start font-bold text-4xl pb-4">Contratos</h1>
           <p className="text-[#575757] mt-[13px]">Exibidos 9 de 9 registros</p>
@@ -87,8 +81,47 @@ export default function Contrato() {
           </div>
           <div className="flex flex-row gap-3">
             <Search strokeWidth={1.5} />
-            <input type='textarea' placeholder='Pesquisar'></input>
+            <input type='textarea' placeholder='Pesquisar...' className="rounded mb-2 pl-3 border border-[#575757] text-[#575757]"></input>
           </div>
+        </div>
+
+        <div class="overflow-x-auto py-8">
+          <table class="table-auto border-collapse border ">
+            <thead className="bg-[#E5E5E5] border border-blue-500">
+              <tr>
+                <th class="border px-6 py-2">N° do Contrato</th>
+                <th class="border px-12 py-2">Fornecedor</th>
+                <th class="border px-14 py-2">Fiscal</th>
+                <th class="border px-14 py-2">Objeto</th>
+                <th class="border px-4 py-2">Gerência</th>
+                <th class="border px-7 py-2">Vig. Início</th>
+                <th class="border px-7 py-2">VIg. Fim</th>
+                <th class="border px-4 py-2">Ações</th>
+              </tr>
+            </thead>
+            <tbody className="text-center">
+              <tr>
+                <td class="border px-4 py-2">0A0A0A0A0A0A</td>
+                <td class="border px-4 py-2">Nome do Fornecedor</td>
+                <td class="border px-4 py-2">Nome do fiscal</td>
+                <td class="border px-4 py-2">Objeto</td>
+                <td class="border px-4 py-2">Gerência</td>
+                <td class="border px-4 py-2">dd/mm/aaaa</td>
+                <td class="border px-4 py-2">dd/mm/aaaa</td>
+                <td class="border px-4 py-2">Dado 3</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">0A0A0A0A0A0A</td>
+                <td class="border px-4 py-2">Nome do Fornecedor</td>
+                <td class="border px-4 py-2">Nome do fiscal</td>
+                <td class="border px-4 py-2">Objeto</td>
+                <td class="border px-4 py-2">Gerência</td>
+                <td class="border px-4 py-2">dd/mm/aaaa</td>
+                <td class="border px-4 py-2">dd/mm/aaaa</td>
+                <td class="border px-4 py-2">Dado 3</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

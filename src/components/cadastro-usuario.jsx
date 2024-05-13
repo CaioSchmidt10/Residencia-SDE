@@ -59,7 +59,7 @@ export default function CadastroUsuario() {
         </div>
       </div>
 
-      <div className="bg-white w-3/4 rounded-sm flex justify-between items-center drop-shadow-lg mb-5 px-20 pb-5">
+      <div className="bg-white w-3/4 rounded-sm flex justify-between items-center drop-shadow-lg mb-5 px-20 pb-[44px]">
         <button 
         onClick={trocarTelaLogin}
         className="text-[#074173] text-lg hover:text-[#022c4f]">
