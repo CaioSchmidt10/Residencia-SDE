@@ -32,7 +32,7 @@ export default function CadastroContrato() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] h-screen bg-blue-950 text-white">
+      <div className="w-[330px] bg-blue-950 text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -65,10 +65,10 @@ export default function CadastroContrato() {
         </div>
       </div>
 
-      <div className="flex-grown bg-slate-400 px-7 py-5 w-full">
-        <h1 className="text-start font-bold text-4xl pb-6">Adicionar Contrato</h1>
+      <div className="flex-grown bg-slate-400 px-7 py-4 w-full">
+        <h1 className="text-start font-bold text-4xl pb-4">Adicionar Contrato</h1>
         <div className="flex flex-row">
-          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2 ]">
+          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2 focus:bg-[#E5E5E5]">
             <p className="font-bold">Dados do Contrato</p>
           </button>
           <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-4 py-2 ">
@@ -115,7 +115,10 @@ export default function CadastroContrato() {
               
               <div>
                 <p className="font-bold text-sm ml-2">Telefone do Responsável *</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
+                <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded w-full">
+                  <p className=''>+55</p>
+                  <input type='textarea' placeholder="(00) 0 0000-0000" className="border-l rounded-r-lg border-black w-full pl-1 h-10"></input>
+                </div>
               </div>
             </div>
 
@@ -123,10 +126,9 @@ export default function CadastroContrato() {
               <div>
                 <p className="font-bold text-sm ml-2">Gerência *</p>
                 <select className="border border-slate-700 rounded w-full px-5 py-2">
-                  <option>GGGTEC</option>
-                  <option>GGEE</option>
-                  <option>GIT</option>
-                  <option>GPEOT</option>
+                  <option>Gerência 01</option>
+                  <option>Gerência 02</option>
+                  <option>Gerência 03</option>
                 </select>
               </div>
 
@@ -142,7 +144,7 @@ export default function CadastroContrato() {
 
               <div>
                 <p className="font-bold text-sm ml-2">E-mail do Fiscal *</p>
-                <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
+                <input type='email' className="border border-slate-700 rounded px-5 py-2"></input>
               </div>
               
             </div>
@@ -150,18 +152,27 @@ export default function CadastroContrato() {
 
           <div className="pt-2 flex justify-between">
             <div>
-              <p className="font-bold text-sm ml-2">Objeto *</p>
+              <p className="font-bold text-sm ml-2">Objeto (Descrição resumida) *</p>
               <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2 w-[500px]"></input>
             </div>
 
             <div>
               <p className="font-bold text-sm ml-2">Telefone do Fiscal *</p>
-              <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
+              <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded w-full">
+                <p className=''>+55</p>
+                <input type='textarea' placeholder="(00) 0 0000-0000" className="border-l rounded-r-lg border-black w-full pl-1 h-10"></input>
+              </div>
             </div>
           </div>
+
+          <div className="flex flex-col justify-start items-start">
+            <p>Objeto</p>
+            <textarea className="w-full border border-black rounded-lg pl-1"></textarea>
+          </div>
+
         </div>
 
-        <div className="flex flex-row justify-end gap-5 pt-4">
+        <div className="flex flex-row justify-end gap-5 pt-4 ">
           <button 
           onClick={trocarTelaCancelar}
           className="bg-[#878787] hover:bg-gray-600 text-white py-3 px-5 rounded-lg font-bold">
@@ -169,9 +180,7 @@ export default function CadastroContrato() {
           </button>
           <button 
           onClick={trocarTelaProximo}
-          className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">
-            Próximo
-          </button>
+          className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Próximo</button>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import {CircleUserRound, Search, CirclePlus, ChevronDown, StickyNote, Home, Squa
 
 import { useNavigate } from 'react-router-dom';
 
-export default function Contrato() {
+export default function TermoAditivo() {
 
   const navigate = useNavigate();
   const trocarTela = () => navigate("/CadastroContrato");
@@ -67,16 +67,16 @@ export default function Contrato() {
 
       <div className=" bg-slate-400 px-7 py-5 w-screen">
         <div className="flex flex-row gap-6">
-          <h1 className="text-start font-bold text-4xl pb-4">Contratos</h1>
-          <p className="text-[#575757] mt-[13px]">Exibidos 9 de 9 registros</p>
+          <h1 className="text-start font-bold text-4xl pb-4">Termo Aditivio/Supressão</h1>
+          <p className="text-[#575757] mt-[13px]">Exibidos 0 de 0 registros</p>
         </div>
         <div className="flex justify-between">
           <div>
             <button
               onClick={trocarTela} 
-              className="flex flex-row gap-3 bg-[#074173] text-white py-2 px-1 rounded">
+              className="flex flex-row gap-3 bg-[#074173] text-white py-2 px-2 rounded">
               <CirclePlus strokeWidth={1.5} />
-              <p>Adicionar Contrato</p>
+              <p>Adicionar Termo Aditivio/Supressão</p>
             </button>
           </div>
           <div className="flex flex-row gap-3">
@@ -85,8 +85,8 @@ export default function Contrato() {
           </div>
         </div>
 
-        <div class="overflow-x-auto py-8">
-          <table class="table-auto border-collapse border ">
+        <div class="overflow-x-auto py-8 ">
+          <table class="table-auto border-collapse border w-full">
             <thead className="bg-[#E5E5E5] border border-blue-500">
               <tr>
                 <th class="border px-6 py-2">N° do Contrato</th>
@@ -99,37 +99,10 @@ export default function Contrato() {
                 <th class="border px-4 py-2">Ações</th>
               </tr>
             </thead>
-            <tbody className="text-center">
-              <tr>
-                <td class="border px-4 py-2">0A0A0A0A0A0A</td>
-                <td class="border px-4 py-2">Nome do Fornecedor</td>
-                <td class="border px-4 py-2">Nome do fiscal</td>
-                <td class="border px-4 py-2">Objeto</td>
-                <td class="border px-4 py-2">Gerência</td>
-                <td class="border px-4 py-2">dd/mm/aaaa</td>
-                <td class="border px-4 py-2">dd/mm/aaaa</td>
-                <td class="flex flex-row gap-1 px-1 py-2">
-                  <button onClick={trocarTela} ><Pen size={20} strokeWidth={1.25} /></button>
-                  <button><Eye strokeWidth={1.25} /></button>
-                  <button><Trash strokeWidth={1.25} /></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2">0A0A0A0A0A0A</td>
-                <td class="border px-4 py-2">Nome do Fornecedor</td>
-                <td class="border px-4 py-2">Nome do fiscal</td>
-                <td class="border px-4 py-2">Objeto</td>
-                <td class="border px-4 py-2">Gerência</td>
-                <td class="border px-4 py-2">dd/mm/aaaa</td>
-                <td class="border px-4 py-2">dd/mm/aaaa</td>
-                <td class="flex flex-row border-t gap-1 px-1 py-2">
-                  <button onClick={trocarTela}><Pen size={20} strokeWidth={1.25} /></button>
-                  <button><Eye strokeWidth={1.25} /></button>
-                  <button><Trash strokeWidth={1.25} /></button>
-                </td>
-              </tr>
-            </tbody>
           </table>
+          <div className="bg-white w-full ">
+            <p>Nenhum Registro encontrado</p>
+          </div>
         </div>
       </div>
     </div>

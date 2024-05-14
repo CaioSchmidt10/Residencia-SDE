@@ -6,6 +6,7 @@ import LoginUsuario from "./components/login-usuario";
 import Contrato from "./components/contrato";
 import CadastroContrato from "./components/cadastro-contrato";
 import CaracteristicasContrato from "./components/caracteristicas-contrato";
+import TermoAditivo from "./components/termo-aditivo-supressao";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/Contrato' element={<Contrato/>}/>
         <Route exact path='/CadastroContrato' element={<CadastroContrato/>}/>
         <Route exact path='/CaracteristicasContrato' element={<CaracteristicasContrato/>}/>
+        <Route exact path='/TermoAditivo' element={<TermoAditivo/>}/>
       </Routes>
     </Router>
   </div>

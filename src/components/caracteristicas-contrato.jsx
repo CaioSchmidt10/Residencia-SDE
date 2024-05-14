@@ -7,6 +7,7 @@ export default function CaracteristicasContrato() {
   const trocarTelaSair = () => navigate("/LoginUsuario")
   const trocarTelaCancelar = () => navigate("/Contrato")
   const trocarTelaVoltar = () => navigate("/CadastroContrato")
+  const trocarTelaSalvar = () => navigate("/Contrato")
 
   return (
   <div className="font-Inter">
@@ -91,14 +92,14 @@ export default function CaracteristicasContrato() {
                 <p className="font-bold text-sm ml-2">Valor Unitário *</p>
                 <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded pl-3 w-full">
                   <p>R$</p>
-                  <input type='textarea' placeholder="0,00" className="border-l border-black w-full h-10 pl-2"></input>
+                  <input type='textarea' placeholder="0,00" className="border-l border-black w-full rounded-r-lg h-10 pl-2"></input>
                 </div>
               </div>
               <div>
                 <p className="font-bold text-sm ml-2">Valor Total *</p>
                 <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded pl-3 w-full">
                   <p>R$</p>
-                  <input type='textarea' placeholder="0,00" className="border-l border-black w-full h-10 pl-2"></input>
+                  <input type='textarea' placeholder="0,00" className="border-l border-black w-full rounded-r-lg h-10 pl-2"></input>
                 </div>
               </div>
             </div>
@@ -111,10 +112,13 @@ export default function CaracteristicasContrato() {
               <div>
                 <p className="font-bold text-sm ml-2">Indice de Reajuste *</p>
                 <select className="border border-slate-700 rounded w-full px-3 py-2">
-                  <option>GGGTEC</option>
-                  <option>GGEE</option>
-                  <option>GIT</option>
-                  <option>GPEOT</option>
+                  <option>IPCA</option>
+                  <option>IGP-M</option>
+                  <option>INPC</option>
+                  <option>INCC</option>
+                  <option>IGPDI</option>
+                  <option>IPCA-E</option>
+                  <option>IVAR</option>
                 </select>
               </div>
               <div>
@@ -140,8 +144,15 @@ export default function CaracteristicasContrato() {
                 <input type='textarea' className="border border-slate-700 rounded px-5 py-2 w-full"></input>
               </div>
               <div>
-                <p className="font-bold text-sm ml-2">Número do contrato *</p>
-                <input type='textarea' className="border border-slate-700 rounded px-5 py-2 w-full"></input>
+              <p className="font-bold text-sm ml-2">Periodicidade de Pagamento *</p>
+                <select className="border border-slate-700 rounded w-full px-3 py-2">
+                  <option>Mensal</option>
+                  <option>Bimestral</option>
+                  <option>Trimestral</option>
+                  <option>Semestral</option>
+                  <option>Anual</option>
+                  <option>Por cronograma</option>
+                </select>
               </div>
             </div>
 
@@ -159,7 +170,9 @@ export default function CaracteristicasContrato() {
           className="bg-[#878787] hover:bg-gray-600 text-white py-3 px-5 rounded-lg font-bold">
             Cancelar
           </button>
-          <button className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Salvar</button>
+          <button 
+          onClick={trocarTelaSalvar}
+          className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Salvar</button>
         </div>
       </div>
     </div>
