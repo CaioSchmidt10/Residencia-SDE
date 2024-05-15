@@ -33,7 +33,7 @@ export default function CadastroAditivo() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] bg-blue-950 text-white">
+      <div className="w-[330px] h-[36.55rem] bg-blue-950 text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -69,113 +69,49 @@ export default function CadastroAditivo() {
       </div>
 
       <div className="flex-grown bg-slate-400 px-7 py-4 w-full">
-        <h1 className="text-start font-bold text-4xl pb-4">Adicionar Contrato</h1>
+        <h1 className="text-start font-bold text-4xl pb-4">Adicionar Termo Aditivo</h1>
         <div className="flex flex-row">
-          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2 focus:bg-[#E5E5E5]">
-            <p className="font-bold">Dados do Contrato</p>
+          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-7 py-2 focus:bg-[#E5E5E5]">
+            <p className="font-bold">Dados do aditivo</p>
           </button>
-          <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-4 py-2 ">
-            <p className="font-bold">Características do Contrato</p>
+          <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-7 py-2 ">
+            <p className="font-bold">Características do aditivo</p>
           </button>
         </div>
-        <div className="bg-[#D9D9D9] rounded-b-lg border border-black px-10 py-4">
-          <div className="flex flex-row justify-between ">
-            <div className="grid grid-cols-2 gap-x-16 gap-y-2">
+        <div className="flex flex-row gap-24 bg-white rounded-b-lg border border-black px-10 py-4 w-full">
+          <div className="flex flex-col py-3">
+            <div className="flex flex-row gap-10">
               <div>
-                <p className="font-bold text-sm ml-2">Número do contrato *</p>
+                <p className="font-bold text-sm ml-2">Setor *</p>
+                <input type='textarea' className="border border-slate-700 rounded px-5 py-2 w-full"></input>
+              </div>
+
+              <div>
+                <p className="font-bold text-sm ml-2">Nº do SEI **</p>
                 <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">Código POA *</p>
-                <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">Fornecedor *</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">CNPJ *</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
-              </div>
-              
-              <div>
-                <p className="font-bold text-sm ml-2">Responsável*</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">Razão Social *</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">E-mail do Responsável *</p>
-                <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2"></input>
-              </div>
-              
-              <div>
-                <p className="font-bold text-sm ml-2">Telefone do Responsável *</p>
-                <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded w-full">
-                  <p className=''>+55</p>
-                  <input type='textarea' placeholder="(00) 0 0000-0000" className="border-l rounded-r-lg border-black w-full pl-1 h-10"></input>
-                </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-x-16 gap-y-2">
-              <div>
-                <p className="font-bold text-sm ml-2">Gerência *</p>
-                <select className="border border-slate-700 rounded w-full px-5 py-2">
-                  <option>Gerência 01</option>
-                  <option>Gerência 02</option>
-                  <option>Gerência 03</option>
-                </select>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">Nome do Fiscal *</p>
-                <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">Matrícula do Fiscal *</p>
-                <input type='textarea' className="border border-slate-700 rounded px-5 py-2"></input>
-              </div>
-
-              <div>
-                <p className="font-bold text-sm ml-2">E-mail do Fiscal *</p>
-                <input type='email' className="border border-slate-700 rounded px-5 py-2"></input>
-              </div>
-              
+            <div className="flex flex-col justify-start items-start">
+              <p>Comentário *</p>
+              <textarea className="w-full border border-black rounded-lg pl-1"></textarea>
             </div>
           </div>
 
-          <div className="pt-2 flex justify-between">
-            <div>
-              <p className="font-bold text-sm ml-2">Objeto (Descrição resumida) *</p>
-              <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2 w-[500px]"></input>
+          <div className="flex flex-col gap-7 py-4">
+            <div className="">
+              <p className="font-bold text-sm mb-1">Anuência do Fornecedor</p>
+              <input type='file'></input>
             </div>
 
-            <div>
-              <p className="font-bold text-sm ml-2">Telefone do Fiscal *</p>
-              <div className="flex flex-row gap-2 justify-center items-center bg-white border border-slate-700 rounded w-full">
-                <p className=''>+55</p>
-                <input type='textarea' placeholder="(00) 0 0000-0000" className="border-l rounded-r-lg border-black w-full pl-1 h-10"></input>
-              </div>
+            <div className="">
+              <p className="font-bold text-sm mb-1">Anuência do Fornecedor</p>
+              <input type='file'></input>
             </div>
           </div>
-
-          <div className="flex flex-col justify-start items-start">
-            <p>Objeto</p>
-            <textarea className="w-full border border-black rounded-lg pl-1"></textarea>
-          </div>
-
         </div>
 
-        <div className="flex flex-row justify-end gap-5 pt-4 ">
+        <div className="flex flex-row justify-center gap-5 pt-4 ">
           <button 
           onClick={trocarTelaCancelar}
           className="bg-[#878787] hover:bg-gray-600 text-white py-3 px-5 rounded-lg font-bold">

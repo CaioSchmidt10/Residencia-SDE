@@ -72,7 +72,7 @@ export default function AdicionarTermo() {
         <h1 className="text-start font-bold text-4xl pb-4">Adicionar Termo Aditivo/Supressão</h1>
 
         <div className="flex justify-center py-10">
-            <div className="bg-white border border-black rounded-lg inline-block px-8 py-6">
+            <div className="bg-white border border-black rounded-lg inline-block px-8 py-8">
                 <h1 className='text-xl'>Escolha o tipo de termo para continuar :</h1>
                 <div className="grid grid-cols-1 gap-1 pt-5">
                     <p className="font-bold ml-2">Tipo *</p>
@@ -84,7 +84,7 @@ export default function AdicionarTermo() {
             </div>
         </div>
         
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center gap-5">
             <button 
             onClick={trocarTelaCancelar}
             className=" bg-[#878787] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
@@ -92,9 +92,9 @@ export default function AdicionarTermo() {
             </button>
 
             <button 
-            onClick={trocarTelaCancelar}
-            className=" bg-[#878787] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
-                <p className="text-white">Cancelar</p>
+            onClick={trocarTelaProximo}
+            className=" bg-[#074173] hover:bg-blue-900 rounded-lg px-5 py-3">
+                <p className="text-white">Proximo</p>
             </button>
         </div>
       </div>
