@@ -1,12 +1,13 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-export default function CadastroContrato() {
+export default function CadastroAditivo() {
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
   const trocarTelaCancelar = () => navigate("/Contrato")
   const trocarTelaProximo = () => navigate("/CaracteristicasContrato")
+  const trocarTelaInicio = () => navigate("/TelaPrincipal");
 
   return (
   <div className="font-Inter">
@@ -45,7 +46,9 @@ export default function CadastroContrato() {
           </div>
         </div>
         <div className="flex flex-col">
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
+          <button 
+          onClick={trocarTelaInicio}
+          className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
             <Home />
             <p>Tela de início</p>
           </button>

@@ -8,6 +8,7 @@ export default function CaracteristicasContrato() {
   const trocarTelaCancelar = () => navigate("/Contrato")
   const trocarTelaVoltar = () => navigate("/CadastroContrato")
   const trocarTelaSalvar = () => navigate("/Contrato")
+  const trocarTelaInicio = () => navigate("/TelaPrincipal");
 
   return (
   <div className="font-Inter">
@@ -46,7 +47,9 @@ export default function CaracteristicasContrato() {
           </div>
         </div>
         <div className="flex flex-col">
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
+          <button 
+          onClick={trocarTelaInicio}
+          className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
             <Home />
             <p>Tela de início</p>
           </button>
@@ -123,16 +126,14 @@ export default function CaracteristicasContrato() {
               </div>
               <div>
                 <p className="font-bold text-sm ml-2">Data Vig.Inicial *</p>
-                <div className="flex flex-row gap-2 justify-between items-center bg-white border border-slate-700 rounded pr-2 w-full">
-                  <input type='textarea' placeholder="dd/mm/aaaa" className="w-full h-10 pl-4"></input>
-                  <Calendar />
+                <div className="flex flex-row gap-2 justify-between items-center bg-white border border-slate-700 rounded w-full">
+                  <input type='date' placeholder="dd/mm/aaaa" className="w-full rounded-lg h-10 pl-4"></input>
                 </div>
               </div>
               <div>
                 <p className="font-bold text-sm ml-2">Data Vig.Final *</p>
-                <div className="flex flex-row gap-2 justify-between items-center bg-white border border-slate-700 rounded pr-2 w-full">
-                  <input type='textarea' placeholder="dd/mm/aaaa" className="w-full h-10 pl-4"></input>
-                  <Calendar />
+                <div className="bg-white border border-slate-700 rounded-lg w-full">
+                  <input type='date' placeholder="dd/mm/aaaa" className="w-full rounded-lg h-10 pl-4"></input>
                 </div>
               </div>
             </div>

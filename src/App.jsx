@@ -1,12 +1,14 @@
 import React from "react";
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import TelaPrincipal from "./components/tela-principal";
-import CadastroUsuario from "./components/cadastro-usuario";
-import LoginUsuario from "./components/login-usuario";
-import Contrato from "./components/contrato";
-import CadastroContrato from "./components/cadastro-contrato";
-import CaracteristicasContrato from "./components/caracteristicas-contrato";
-import TermoAditivo from "./components/termo-aditivo-supressao";
+import CadastroUsuario from "./components/login-cadastro/cadastro-usuario";
+import LoginUsuario from "./components/login-cadastro/login-usuario";
+import Contrato from "./components/contrato/contrato";
+import CadastroContrato from "./components/contrato/cadastro-contrato";
+import CaracteristicasContrato from "./components/contrato/caracteristicas-contrato";
+import TermoAditivo from "./components/termo-aditivo/termo-aditivo-supressao";
+import AdicionarTermo from "./components/termo-aditivo/adicionar-termo-aditivo-supressao"
+import CadastroAditivo from "./components/termo-aditivo/cadastro-aditivo";
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route exact path='/CadastroContrato' element={<CadastroContrato/>}/>
         <Route exact path='/CaracteristicasContrato' element={<CaracteristicasContrato/>}/>
         <Route exact path='/TermoAditivo' element={<TermoAditivo/>}/>
+        <Route exact path='/AdicionarTermo' element={<AdicionarTermo/>}/>
+        <Route exact path='/CadastroAditivo' element={<CadastroAditivo/>}/>
       </Routes>
     </Router>
   </div>
