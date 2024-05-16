@@ -5,8 +5,8 @@ export default function CadastroAditivo() {
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
-  const trocarTelaCancelar = () => navigate("/Contrato")
-  const trocarTelaProximo = () => navigate("/CaracteristicasContrato")
+  const trocarTelaCancelar = () => navigate("/AdicionarTermo")
+  const trocarTelaProximo = () => navigate("/CaracteristicasAditivo")
   const trocarTelaInicio = () => navigate("/TelaPrincipal");
 
   return (
@@ -100,12 +100,12 @@ export default function CadastroAditivo() {
 
           <div className="flex flex-col gap-7 py-4">
             <div className="">
-              <p className="font-bold text-sm mb-1">Anuência do Fornecedor</p>
+              <p className="font-bold text-sm mb-1">Anuência do Fornecedor *</p>
               <input type='file'></input>
             </div>
 
             <div className="">
-              <p className="font-bold text-sm mb-1">Anuência do Fornecedor</p>
+              <p className="font-bold text-sm mb-1">Carta Fiança *</p>
               <input type='file'></input>
             </div>
           </div>

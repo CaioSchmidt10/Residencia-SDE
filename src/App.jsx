@@ -9,6 +9,7 @@ import CaracteristicasContrato from "./components/contrato/caracteristicas-contr
 import TermoAditivo from "./components/termo-aditivo/termo-aditivo-supressao";
 import AdicionarTermo from "./components/termo-aditivo/adicionar-termo-aditivo-supressao"
 import CadastroAditivo from "./components/termo-aditivo/cadastro-aditivo";
+import CaracteristicasAditivo from "./components/termo-aditivo/caracteristicas-aditivo";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/TermoAditivo' element={<TermoAditivo/>}/>
         <Route exact path='/AdicionarTermo' element={<AdicionarTermo/>}/>
         <Route exact path='/CadastroAditivo' element={<CadastroAditivo/>}/>
+        <Route exact path='/CaracteristicasAditivo' element={<CaracteristicasAditivo/>}/>
       </Routes>
     </Router>
   </div>

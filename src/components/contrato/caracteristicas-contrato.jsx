@@ -141,12 +141,13 @@ export default function CaracteristicasContrato() {
             
             <div className='space-y-5'>
               <div>
-                <p className="font-bold text-sm ml-2">Número do contrato *</p>
+                <p className="font-bold text-sm ml-2">Cadus *</p>
                 <input type='textarea' className="border border-slate-700 rounded px-5 py-2 w-full"></input>
               </div>
               <div>
               <p className="font-bold text-sm ml-2">Periodicidade de Pagamento *</p>
                 <select className="border border-slate-700 rounded w-full px-3 py-2">
+                  <option>Selecione ...</option>
                   <option>Mensal</option>
                   <option>Bimestral</option>
                   <option>Trimestral</option>
