@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import PrazoAditivo from './scripts/AditivoPrazo';
 import QuantidadeAditivo from './scripts/AditivoQuantidade';
+import PrazoQuantidade from './scripts/Prazo-e-Quantidade';
+
 
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { Form, useNavigate } from 'react-router-dom';
@@ -14,6 +16,7 @@ export default function CaracteristicasAditivo() {
   const trocarTelaSair = () => navigate("/LoginUsuario")
   const trocarTelaVoltar = () => navigate("/CadastroAditivo")
   const trocarTelaSalvar = () => navigate("/TermoAditivo")
+  const trocarTelaCancelar = () => navigate("/TermoAditivo")
   const trocarTelaInicio = () => navigate("/TelaPrincipal");
 
   return (
@@ -40,7 +43,7 @@ export default function CaracteristicasAditivo() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] h-[36.55rem] bg-blue-950 text-white">
+      <div className="w-[330px] h-[100vh] bg-blue-950 text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -67,10 +70,10 @@ export default function CaracteristicasAditivo() {
             </div>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className="pl-9">Lorem Ipsum</p>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className="pl-9">Lorem Ipsum</p>
           </button>
         </div>
       </div>
@@ -101,11 +104,13 @@ export default function CaracteristicasAditivo() {
                                 <option value="">Selecione ...</option>
                                 <option value="prazo">Prazo</option>
                                 <option value="quantidade">Quantidade</option>
+                                <option value="prazoQuantidade">Prazo e Quantidade</option>
                             </select>
                         </div>
 
                         {selectedOption === "prazo" && <PrazoAditivo/>}
                         {selectedOption === "quantidade" && <QuantidadeAditivo/>}
+                        {selectedOption === "prazoQuantidade" && <PrazoQuantidade/>}
                     </div>
                 </div>
             </div>
@@ -114,8 +119,14 @@ export default function CaracteristicasAditivo() {
         <div className="flex flex-row justify-center gap-5 pt-5">
             <button 
             onClick={trocarTelaVoltar}
-            className=" bg-[#878787] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
+            className=" bg-[#575757] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
                 <p className="text-white">Voltar</p>
+            </button>
+
+            <button 
+            onClick={trocarTelaCancelar}
+            className=" bg-[#878787] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
+                <p className="text-white">Cancelar</p>
             </button>
 
             <button 

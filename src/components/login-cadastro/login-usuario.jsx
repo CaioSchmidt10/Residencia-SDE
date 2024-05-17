@@ -13,17 +13,6 @@ export default function LoginUsuario () {
         <div className="pl-8">
           <img src="./assets/logo.png" alt="logo prefeitura" className="h-[130px]"></img>
         </div>
-
-        <div className="flex flex-row gap-10 pr-16">
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <button>
-          <Search />
-          </button>
-        </div>
       </div>
     </header>
 

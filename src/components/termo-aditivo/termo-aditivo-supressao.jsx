@@ -61,10 +61,10 @@ export default function TermoAditivo() {
             </div>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className="pl-9">Lorem Ipsum</p>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className='pl-9'>Lorem Ipsum</p>
           </button>
         </div>
       </div>

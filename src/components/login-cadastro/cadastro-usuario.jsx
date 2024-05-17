@@ -13,17 +13,6 @@ export default function CadastroUsuario() {
         <div className="pl-8">
           <img src="./assets/logo.png" alt="logo prefeitura" className="h-[130px]"></img>
         </div>
-
-        <div className="flex flex-row gap-10 pr-16">
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <div class="bg-gray-300 w-24 h-7"></div>
-          <button>
-          <Search />
-          </button>
-        </div>
       </div>
     </header>
 
@@ -31,7 +20,7 @@ export default function CadastroUsuario() {
       <div className="bg-white w-3/4 rounded-sm flex flex-col items-center">
         <h1 className="text-center text-xl pt-7 pb-5 font-bold">Cadastre-se na Secretaria da Educação</h1>
 
-        <div className="grid grid-cols-2 gap-14 pl-20 pr-20 pb-10">
+        <div className="grid grid-cols-2 gap-14 px-20 pb-10">
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Nome Completo</p>
             <input type='textarea' placeholder='Informe seu nome completo' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4'></input>
@@ -59,7 +48,7 @@ export default function CadastroUsuario() {
         </div>
       </div>
 
-      <div className="bg-white w-3/4 rounded-sm flex justify-between items-center drop-shadow-lg mb-5 px-20 pb-[44px]">
+      <div className="bg-white w-3/4 rounded-sm flex justify-between items-center drop-shadow-lg mb-5 px-[145px] pb-[44px]">
         <button 
         onClick={trocarTelaLogin}
         className="text-[#074173] text-lg hover:text-[#022c4f]">

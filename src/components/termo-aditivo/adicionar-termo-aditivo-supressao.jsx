@@ -1,7 +1,21 @@
+import React, { useState } from 'react';
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function AdicionarTermo() {
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const navegar = useNavigate();
+
+  const handleSelectChange = (event) => {
+    const value = event.target.value;
+    setSelectedOption(value);
+
+    if (value) {
+      navegar(`/${value}`);
+    }
+  };
+
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
@@ -60,10 +74,10 @@ export default function AdicionarTermo() {
             </div>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className="pl-9">Lorem Ipsum</p>
           </button>
           <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
+            <p className="pl-9">Lorem Ipsum</p>
           </button>
         </div>
       </div>
@@ -76,9 +90,14 @@ export default function AdicionarTermo() {
                 <h1 className='text-xl'>Escolha o tipo de termo para continuar :</h1>
                 <div className="grid grid-cols-1 gap-1 pt-5">
                     <p className="font-bold ml-2">Tipo *</p>
-                    <select className="w-full py-2 px-2 text-lg rounded-lg border border-black">
-                        <option>Aditivo</option>
-                        <option>Supressão</option>
+                    <select 
+                    id="options" 
+                    value={selectedOption} 
+                    onChange={handleSelectChange}
+                    className="w-full py-2 px-2 text-lg rounded-lg border border-black">
+                        <option value="">Selecione ...</option>
+                        <option value="CadastroAditivo">Aditivo</option>
+                        <option value="CadastroSupressao">Supressão</option>
                     </select>
                 </div>
             </div>
@@ -90,15 +109,10 @@ export default function AdicionarTermo() {
             className=" bg-[#878787] hover:bg-[#6e6e6e] rounded-lg px-5 py-3">
                 <p className="text-white">Cancelar</p>
             </button>
-
-            <button 
-            onClick={trocarTelaProximo}
-            className=" bg-[#074173] hover:bg-blue-900 rounded-lg px-5 py-3">
-                <p className="text-white">Proximo</p>
-            </button>
         </div>
       </div>
     </div>
+
   </div>
   );
 }
