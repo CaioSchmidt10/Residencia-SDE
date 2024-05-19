@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PrazoAditivo from './scripts/AditivoPrazo';
 import QuantidadeAditivo from './scripts/AditivoQuantidade';
 import PrazoQuantidade from './scripts/Prazo-e-Quantidade';
+import Sidebar from '../scripts/SideBar';
 
 
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
@@ -62,32 +63,20 @@ export default function CaracteristicasAditivo() {
             <Home />
             <p>Tela de início</p>
           </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
+          <Sidebar/>
         </div>
       </div>
 
       <div className="flex-grow bg-slate-400 px-7 py-6">
-        <h1 className="text-start font-bold text-4xl pb-4">Adicionar Termo Aditivo/Supressão</h1>
+        <h1 className="text-start font-bold text-4xl pb-4">Adicionar Termo Aditivo</h1>
         
         <div className="flex flex-col">
             <div className="flex flex-row justify-center">
-                <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-[26px] py-2 focus:bg-[#E5E5E5]">
+                <button className=" bg-gray-300 border-black border border-b-0 rounded-tl drop-shadow-md px-[26px] py-2 focus:bg-[#E5E5E5]">
                     <p className="font-bold">Dados do aditivo</p>
                 </button>
-                <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-[25px] py-2 ">
-                    <p className="font-bold">Características do aditivo</p>
+                <button className="bg-white border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-[25px] py-2 ">
+                    <p className="font-bold ">Características do aditivo</p>
                 </button>
             </div>
 

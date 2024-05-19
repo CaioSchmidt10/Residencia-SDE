@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import {useNavigate} from 'react-router-dom';
+import Sidebar from '../scripts/SideBar';
 
 export default function AdicionarTermo() {
 
@@ -66,19 +67,7 @@ export default function AdicionarTermo() {
             <Home />
             <p>Tela de início</p>
           </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
+          <Sidebar/>
         </div>
       </div>
 

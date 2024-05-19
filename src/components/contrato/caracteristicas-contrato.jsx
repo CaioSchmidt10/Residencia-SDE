@@ -1,5 +1,7 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut, Calendar} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import DatasContrato from './scripts/DatasContrato';
+import Sidebar from '../scripts/SideBar';
 
 export default function CaracteristicasContrato() {
 
@@ -53,29 +55,17 @@ export default function CaracteristicasContrato() {
             <Home />
             <p>Tela de início</p>
           </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
+          <Sidebar/>
         </div>
       </div>
 
       <div className="flex-grown bg-slate-400 px-7 py-5 w-full">
         <h1 className="text-start font-bold text-4xl pb-6">Adicionar Contrato</h1>
         <div className="flex flex-row">
-          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2">
+          <button className=" bg-gray-300 border-black border border-b-0 rounded-tl drop-shadow-md px-4 py-2">
             <p className="font-bold">Dados do Contrato</p>
           </button>
-          <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-4 py-2 ">
+          <button className="bg-white border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-4 py-2 ">
             <p className="font-bold">Características do Contrato</p>
           </button>
         </div>
@@ -124,17 +114,8 @@ export default function CaracteristicasContrato() {
                   <option>IVAR</option>
                 </select>
               </div>
-              <div>
-                <p className="font-bold text-sm ml-2">Data Vig.Inicial *</p>
-                <div className="flex flex-row gap-2 justify-between items-center bg-white border border-slate-700 rounded w-full">
-                  <input type='date' placeholder="dd/mm/aaaa" className="w-full rounded-lg h-10 pl-4"></input>
-                </div>
-              </div>
-              <div>
-                <p className="font-bold text-sm ml-2">Data Vig.Final *</p>
-                <div className="bg-white border border-slate-700 rounded-lg w-full">
-                  <input type='date' placeholder="dd/mm/aaaa" className="w-full rounded-lg h-10 pl-4"></input>
-                </div>
+              <div className='pt-[5px]'>
+                <DatasContrato/>
               </div>
             </div>
 

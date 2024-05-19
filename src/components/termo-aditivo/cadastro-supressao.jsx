@@ -1,13 +1,14 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import QuantidadeAditivo from './scripts/AditivoQuantidade';
+import Sidebar from '../scripts/SideBar';
 
 export default function CadastroSupressao() {
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
   const trocarTelaCancelar = () => navigate("/AdicionarTermo")
-  const trocarTelaProximo = () => navigate("/CaracteristicasAditivo")
+  const trocarTelaSalvar = () => navigate("/TermoAditivo")
   const trocarTelaInicio = () => navigate("/TelaPrincipal");
 
   return (
@@ -53,19 +54,7 @@ export default function CadastroSupressao() {
             <Home />
             <p>Tela de início</p>
           </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p>Lorem Ipsum</p>
-          </button>
+          <Sidebar/>
         </div>
       </div>
 
@@ -120,8 +109,8 @@ export default function CadastroSupressao() {
             Cancelar
           </button>
           <button 
-          onClick={trocarTelaProximo}
-          className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Próximo</button>
+          onClick={trocarTelaSalvar}
+          className="bg-[#074173] hover:bg-blue-900 text-white py-3 px-5 rounded-lg font-bold">Salvar</button>
         </div>
       </div>
     </div>

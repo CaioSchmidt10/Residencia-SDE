@@ -1,5 +1,6 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Sidebar from '../scripts/SideBar';
 
 export default function CadastroAditivo() {
 
@@ -52,29 +53,17 @@ export default function CadastroAditivo() {
             <Home />
             <p>Tela de início</p>
           </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <StickyNote />
-            <p>Gestão Contratual</p>
-            <div className="ml-20">
-              <ChevronDown />
-            </div>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <p className="pl-9">Lorem Ipsum</p>
-          </button>
+          <Sidebar/>
         </div>
       </div>
 
       <div className="flex-grown bg-slate-400 px-7 py-4 w-full">
         <h1 className="text-start font-bold text-4xl pb-4">Adicionar Termo Aditivo</h1>
         <div className="flex flex-row">
-          <button className=" bg-[#D9D9D9] border-black border border-b-0 rounded-tl drop-shadow-md px-7 py-2 focus:bg-[#E5E5E5]">
-            <p className="font-bold">Dados do aditivo</p>
+          <button className=" bg-white border-black border border-b-0 rounded-tl drop-shadow-md px-7 py-2 focus:bg-[#E5E5E5]">
+            <p className="font-bold text-lg">Dados do aditivo</p>
           </button>
-          <button className="bg-[#D9D9D9] border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-7 py-2 ">
+          <button className="bg-gray-300 border-black border border-l-0  border-b-0 rounded-tr drop-shadow-md px-7 py-2 ">
             <p className="font-bold">Características do aditivo</p>
           </button>
         </div>
