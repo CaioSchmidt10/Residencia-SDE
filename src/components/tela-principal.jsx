@@ -1,8 +1,11 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useHistory} from 'react-router-dom';
 import Sidebar from './scripts/SideBar';
+import Atualizacao from './scripts/AtulizaçãoDataHora';
 
 export default function TelaPrincipal() {
+
+  
 
   const navigate = useNavigate();
   const trocarTelaSair = () => navigate("/LoginUsuario")
@@ -32,7 +35,7 @@ export default function TelaPrincipal() {
     </header>
 
     <div className="flex">
-      <div className=" w-[330px] h-[36.55rem] bg-blue-950 text-white">
+      <div className=" w-[330px] h-[36.55rem] bg-[#074173] text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -45,21 +48,17 @@ export default function TelaPrincipal() {
           </div>
         </div>
         <div className="flex flex-col">
-          <button className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <Home />
-            <p>Tela de início</p>
-          </button>
-          <Sidebar></Sidebar>
+          <Sidebar/>
         </div>
       </div>
       <div className="bg-gray-300 px-3 py-7 flex-grow">
         <div className="flex justify-between">
           <h1 className="text-4xl">Início</h1>
-          <p className="text-[#575757] text-lg pt-2">Atualizado em dd/mm/aaaa ás hh:hh</p>
+          <Atualizacao/>
         </div>
 
         <div className="flex flex-row gap-3 py-10">
-          <div className="bg-[#0095DC] rounded-lg">
+          <div className="bg-[#0095DC] rounded-lg drop-shadow-lg">
             <div className="grid grid-cols-2 gap-10 pt-5 h-[150px]">
               <div className="pl-3 text-white text-3xl w-[100px]">
                 <p>Contratos Ativos</p>
@@ -68,14 +67,14 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">2</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 transition-all duration-500">
               <button 
               onClick={trocarTelaContrato}
-              className="w-full text-white py-2">Ver Contratos</button>
+              className="w-full text-white py-2 ">Ver Contratos</button>
             </div>
           </div>
 
-          <div className="bg-[#D20016] rounded-lg">
+          <div className="bg-[#D20016] rounded-lg drop-shadow-lg">
             <div className="grid grid-cols-2 gap-10 pt-5 h-[150px]">
               <div className="pl-3 text-white text-3xl w-[100px]">
                 <p>Contratos Vencidos</p>
@@ -84,12 +83,12 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">5</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 ">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 transition-all duration-500">
               <button className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
 
-          <div className="bg-[#7BC200] rounded-lg">
+          <div className="bg-[#7BC200] rounded-lg drop-shadow-lg">
             <div className="grid grid-cols-2 gap-10 pt-5 h-[150px]">
               <div className="pl-3 text-white text-3xl w-[100px]">
                 <p>Contratos Atualizados</p>
@@ -98,12 +97,12 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">9</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 transition-all duration-500">
               <button className="w-full text-white py-2">Ver Contratos</button>
             </div>
           </div>
 
-          <div className="bg-[#F8C600] rounded-lg">
+          <div className="bg-[#F8C600] rounded-lg drop-shadow-lg">
             <div className="grid grid-cols-2 gap-10 pt-5 h-[150px]">
               <div className="pl-3 text-white text-3xl w-[100px]">
                 <p>Avisos e Notificações</p>
@@ -112,7 +111,7 @@ export default function TelaPrincipal() {
                 <h1 className="text-6xl">5</h1>
               </div>
             </div>
-            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50">
+            <div className="bg-black bg-opacity-25 rounded-lg hover:bg-opacity-50 transition-all duration-500">
               <button className="w-full text-white py-2">Ver Avisos e Notificações</button>
             </div>
           </div>

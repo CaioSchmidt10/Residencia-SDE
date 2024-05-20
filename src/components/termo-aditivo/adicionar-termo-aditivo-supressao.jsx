@@ -48,7 +48,7 @@ export default function AdicionarTermo() {
     </header>
 
     <div className="flex">
-      <div className="w-[330px] h-[36.55rem] bg-blue-950 text-white">
+      <div className="w-[330px] h-[36.55rem] bg-[#074173] text-white">
         <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
           <button>
             <SquareUserRound  size={80}/>
@@ -61,12 +61,6 @@ export default function AdicionarTermo() {
           </div>
         </div>
         <div className="flex flex-col">
-          <button 
-          onClick={trocarTelaInicio}
-          className="px-4 py-3 w-full hover:bg-[#042F54] text-lg text-start flex flex-row gap-2">
-            <Home />
-            <p>Tela de início</p>
-          </button>
           <Sidebar/>
         </div>
       </div>
