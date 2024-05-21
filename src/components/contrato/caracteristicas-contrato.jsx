@@ -1,6 +1,7 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut, Calendar} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import DatasContrato from './scripts/DatasContrato';
+import FiscalCard from '../scripts/User';
 import Sidebar from '../scripts/SideBar';
 
 export default function CaracteristicasContrato() {
@@ -37,17 +38,7 @@ export default function CaracteristicasContrato() {
 
     <div className="flex">
       <div className="w-[420px] h-screen bg-[#074173] text-white">
-        <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
-          <button>
-            <SquareUserRound  size={80}/>
-          </button>
-          <div>
-            <button className='text-lg mt-4 hover:bg-gray-400 rounded hover:text-slate-600'>
-              Nome do Fiscal
-            </button>
-            <p>Matricula: 000000</p>
-          </div>
-        </div>
+        <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
         </div>

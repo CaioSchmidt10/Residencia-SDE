@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PrazoAditivo from './scripts/AditivoPrazo';
 import QuantidadeAditivo from './scripts/AditivoQuantidade';
 import PrazoQuantidade from './scripts/Prazo-e-Quantidade';
+import FiscalCard from '../scripts/User';
 import Sidebar from '../scripts/SideBar';
 
 
@@ -45,17 +46,7 @@ export default function CaracteristicasAditivo() {
 
     <div className="flex">
       <div className="w-[330px] h-[100vh] bg-[#074173] text-white">
-        <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
-          <button>
-            <SquareUserRound  size={80}/>
-          </button>
-          <div>
-            <button className='text-lg mt-4 hover:bg-gray-400 rounded hover:text-slate-600'>
-              Nome do Fiscal
-            </button>
-            <p>Matricula: 000000</p>
-          </div>
-        </div>
+        <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
         </div>

@@ -1,5 +1,6 @@
 import {CircleUserRound, Search, CirclePlus, ChevronDown, StickyNote, Home, SquareUserRound, LogOut, Pen, Eye, Trash} from 'lucide-react';
 import Sidebar from '../scripts/SideBar';
+import FiscalCard from '../scripts/User';
 import { useNavigate } from 'react-router-dom';
 
 export default function TermoAditivo() {
@@ -35,17 +36,7 @@ export default function TermoAditivo() {
 
     <div className="flex">
       <div className="w-[29%] h-[36.55rem] bg-[#074173] text-white">
-        <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
-          <button>
-            <SquareUserRound  size={80}/>
-          </button>
-          <div>
-            <button className='text-lg mt-4 hover:bg-gray-400 rounded hover:text-slate-600'>
-              Nome do Fiscal
-            </button>
-            <p>Matricula: 000000</p>
-          </div>
-        </div>
+        <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
         </div>

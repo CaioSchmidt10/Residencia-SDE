@@ -1,6 +1,7 @@
 import {CircleUserRound, ChevronDown, StickyNote, Home, SquareUserRound, LogOut} from 'lucide-react';
 import { useNavigate, useHistory} from 'react-router-dom';
 import Sidebar from './scripts/SideBar';
+import FiscalCard from './scripts/User';
 import Atualizacao from './scripts/AtulizaçãoDataHora';
 
 export default function TelaPrincipal() {
@@ -22,7 +23,7 @@ export default function TelaPrincipal() {
         <div className="flex flex-row gap-10 pr-16">
           <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
             <CircleUserRound/>
-            <p className="text-lg">Meus Dados</p>
+            <p className="text-lg">Meus Dadoas</p>
           </button>
           <button
           onClick={trocarTelaSair} 
@@ -36,17 +37,7 @@ export default function TelaPrincipal() {
 
     <div className="flex">
       <div className=" w-[330px] h-[36.55rem] bg-[#074173] text-white">
-        <div className="flex flex-row gap-3 px-5 py-3 drop-shadow-lg">
-          <button>
-            <SquareUserRound  size={80}/>
-          </button>
-          <div>
-            <button className='text-lg mt-4 hover:bg-gray-400 rounded hover:text-slate-600'>
-              Nome do Fiscal
-            </button>
-            <p>Matricula: 000000</p>
-          </div>
-        </div>
+        <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
         </div>
