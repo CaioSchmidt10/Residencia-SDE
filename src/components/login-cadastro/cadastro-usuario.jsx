@@ -1,12 +1,54 @@
-import React, { useContext } from 'react';
-import {Search} from 'lucide-react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { InputContext } from '../scripts/inputs/InputFiscal';
 
 export default function CadastroUsuario() {
   const navigate = useNavigate();
   const trocarTelaLogin = () => navigate("/LoginUsuario")
   const trocarTelaPrincipal = () => navigate("/TelaPrincipal")
+
+  const { setInputValue, setMatriculaValue } = useContext(InputContext);
+  const [nomeCompleto, setNomeCompleto] = useState('');
+  const [matricula, setMatricula] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmarSenha, setConfirmarSenha] = useState('');
+  
+
+  const handleNameChange = (event) => {
+    setNomeCompleto(event.target.value);
+    setInputValue(event.target.value);
+  };
+
+  const handleMatriculaChange = (event) => {
+    setMatricula(event.target.value);
+    setMatriculaValue(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleTelefoneChange = (event) => {
+    setTelefone(event.target.value);
+  };
+
+  const handleSenhaChange = (event) => {
+    setSenha(event.target.value);
+  };
+
+  const handleConfirmarSenhaChange = (event) => {
+    setConfirmarSenha(event.target.value);
+  };
+
+  const handleCadastro = () => {
+    if (nomeCompleto.trim() === '' || matricula.trim() === '' || email.trim() === '' || telefone.trim() === '' || senha.trim() === '' || confirmarSenha.trim() === '') {
+      alert('Por favor, preencha todos os campos antes de prosseguir.');
+    } else {
+      navigate("/TelaPrincipal");
+    }
+  };
 
   return (
   <div className="font-Inter">
@@ -25,27 +67,39 @@ export default function CadastroUsuario() {
         <div className="grid grid-cols-2 gap-14 px-20 pb-10 xm:grid-cols-1 xm:gap-5 xm:px-5 ">
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Nome Completo</p>
-            <input type='textarea' placeholder='Informe seu nome completo' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-64'></input>
+            <input 
+            onChange={handleNameChange}
+            type='textarea' placeholder='Informe seu nome completo' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-64'></input>
           </div>
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Matrícula</p>
-            <input type='textarea' placeholder='Formato (000000-0)' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
+            <input
+            onChange={handleMatriculaChange} 
+            type='textarea' placeholder='Formato (000000-0)' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
           </div>
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">E-mail</p>
-            <input type='textarea' placeholder='Informe seu e-mail' className='w-96 text-[#878787] rounded-md border border-gray-500 py-3 pl-4 xm:w-full'></input>
+            <input 
+            onChange={handleEmailChange}
+            type='email' placeholder='Informe seu e-mail' className='w-96 text-[#878787] rounded-md border border-gray-500 py-3 pl-4 xm:w-full'></input>
           </div>
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Telefone</p>
-            <input type='textarea' placeholder='(00) 0 0000-0000' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
+            <input 
+            onChange={handleTelefoneChange}
+            type='textarea' placeholder='(00) 0 0000-0000' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
           </div>
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Senha</p>
-            <input type='textarea' placeholder='Informe uma senha' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
+            <input 
+            onChange={handleSenhaChange}
+            type='password' placeholder='Informe uma senha' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
           </div>
           <div>
             <p className="text-[#074173] pl-4 pb-1 text-lg">Confirme sua senha</p>
-            <input type='textarea' placeholder='Digite novamente sua senha' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
+            <input
+            onChange={handleConfirmarSenhaChange}
+            type='password' placeholder='Digite novamente sua senha' className='w-96 text-[#878787] rounded-md border border-gray-500 py-2 pl-4 xm:w-full'></input>
           </div>
         </div>
       </div>
@@ -58,7 +112,7 @@ export default function CadastroUsuario() {
         </button>
 
         <button 
-        onClick={trocarTelaPrincipal}
+        onClick={handleCadastro}
         className="bg-[#074173] text-white px-5 py-2 rounded text-lg hover:bg-[#022c4f]">
           Cadastrar
         </button>

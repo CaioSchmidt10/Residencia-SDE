@@ -54,7 +54,7 @@ export default function CadastroContrato() {
             <p className="font-bold">Características do Contrato</p>
           </button>
         </div>
-        <div className="flex flex-col justify-center bg-[#D9D9D9] w-5/6 rounded-b-lg border border-black px-10 py-4">
+        <div className="flex flex-col justify-center bg-[#D9D9D9] w-full rounded-b-lg border border-black px-10 py-4">
           <div className="flex flex-row justify-between ">
             <div className="grid grid-cols-2 gap-x-16 gap-y-2">
               <div>

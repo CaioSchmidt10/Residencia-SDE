@@ -12,25 +12,28 @@ import CadastroAditivo from "./components/termo-aditivo/cadastro-aditivo";
 import CadastroSupressao from "./components/termo-aditivo/cadastro-supressao";
 import CaracteristicasAditivo from "./components/termo-aditivo/caracteristicas-aditivo";
 
+import { InputProvider } from "./components/scripts/inputs/InputFiscal";
 
 function App() {
   return (
   <div>
-    <Router>
-      <Routes>
-        <Route exact path='/' element={<CadastroUsuario/>}/>
-        <Route exact path='/LoginUsuario' element={<LoginUsuario/>}/>
-        <Route exact path='/TelaPrincipal' element={<TelaPrincipal/>}/>
-        <Route exact path='/Contrato' element={<Contrato/>}/>
-        <Route exact path='/CadastroContrato' element={<CadastroContrato/>}/>
-        <Route exact path='/CaracteristicasContrato' element={<CaracteristicasContrato/>}/>
-        <Route exact path='/TermoAditivo' element={<TermoAditivo/>}/>
-        <Route exact path='/AdicionarTermo' element={<AdicionarTermo/>}/>
-        <Route exact path='/CadastroAditivo' element={<CadastroAditivo/>}/>
-        <Route exact path='/CadastroSupressao' element={<CadastroSupressao/>}/>
-        <Route exact path='/CaracteristicasAditivo' element={<CaracteristicasAditivo/>}/>
-      </Routes>
-    </Router>
+    <InputProvider>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<CadastroUsuario/>}/>
+          <Route exact path='/LoginUsuario' element={<LoginUsuario/>}/>
+          <Route exact path='/TelaPrincipal' element={<TelaPrincipal/>}/>
+          <Route exact path='/Contrato' element={<Contrato/>}/>
+          <Route exact path='/CadastroContrato' element={<CadastroContrato/>}/>
+          <Route exact path='/CaracteristicasContrato' element={<CaracteristicasContrato/>}/>
+          <Route exact path='/TermoAditivo' element={<TermoAditivo/>}/>
+          <Route exact path='/AdicionarTermo' element={<AdicionarTermo/>}/>
+          <Route exact path='/CadastroAditivo' element={<CadastroAditivo/>}/>
+          <Route exact path='/CadastroSupressao' element={<CadastroSupressao/>}/>
+          <Route exact path='/CaracteristicasAditivo' element={<CaracteristicasAditivo/>}/>
+        </Routes>
+      </Router>
+    </InputProvider>
   </div>
   );
 }

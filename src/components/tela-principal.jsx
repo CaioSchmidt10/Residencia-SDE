@@ -23,7 +23,7 @@ export default function TelaPrincipal() {
         <div className="flex flex-row gap-10 pr-16">
           <button className="flex flex-row gap-2 hover:bg-gray-400 rounded-md p-1">
             <CircleUserRound/>
-            <p className="text-lg">Meus Dadoas</p>
+            <p className="text-lg">Meus Dados</p>
           </button>
           <button
           onClick={trocarTelaSair} 
