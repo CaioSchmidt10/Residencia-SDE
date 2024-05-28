@@ -54,8 +54,8 @@ export default function CadastroContrato() {
             <p className="font-bold">Características do Contrato</p>
           </button>
         </div>
-        <div className="flex flex-col justify-center bg-[#D9D9D9] w-full rounded-b-lg border border-black px-10 py-4">
-          <div className="flex flex-row justify-between ">
+        <div className="flex flex-col justify-center bg-[#D9D9D9] rounded-b-lg border border-black px-10 py-4">
+          <div className="flex flex-row gap-20 ">
             <div className="grid grid-cols-2 gap-x-16 gap-y-2">
               <div>
                 <p className="font-bold text-sm ml-2">Número do contrato *</p>
@@ -101,7 +101,7 @@ export default function CadastroContrato() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-x-16 gap-y-2">
+            <div className="flex flex-col  gap-y-2">
               <div>
                 <p className="font-bold text-sm ml-2">Gerência *</p>
                 <select className="border border-slate-700 rounded w-full px-5 py-2">
@@ -131,10 +131,10 @@ export default function CadastroContrato() {
             </div>
           </div>
 
-          <div className="pt-2 flex justify-between">
+          <div className="pt-2 flex gap-20">
             <div>
               <p className="font-bold text-sm ml-2">Objeto (Descrição resumida) *</p>
-              <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2 w-[500px]"></input>
+              <input type='textarea' className="border border-slate-700 rounded-lg px-5 py-2 w-[505px]"></input>
             </div>
 
             <div>

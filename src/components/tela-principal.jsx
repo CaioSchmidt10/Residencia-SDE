@@ -36,7 +36,7 @@ export default function TelaPrincipal() {
     </header>
 
     <div className="flex">
-      <div className=" w-[330px] h-[36.55rem] bg-[#074173] text-white">
+      <div className=" w-[330px] h-[36.55rem] xl:h-screen bg-[#074173] text-white">
         <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
@@ -48,7 +48,7 @@ export default function TelaPrincipal() {
           <Atualizacao/>
         </div>
 
-        <div className="flex flex-row gap-3 py-10">
+        <div className="flex flex-row gap-3 xl:gap-10 py-10">
           <div className="bg-[#0095DC] rounded-lg drop-shadow-lg">
             <div className="grid grid-cols-2 gap-10 pt-5 h-[150px]">
               <div className="pl-3 text-white text-3xl w-[100px]">

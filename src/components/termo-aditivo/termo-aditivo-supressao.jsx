@@ -35,7 +35,7 @@ export default function TermoAditivo() {
     </header>
 
     <div className="flex">
-      <div className="w-[29%] h-[36.55rem] bg-[#074173] text-white">
+      <div className="w-[29%] h-[36.55rem] xl:w-[22%] xl:h-screen bg-[#074173] text-white">
         <FiscalCard/>
         <div className="flex flex-col">
           <Sidebar/>
