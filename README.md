@@ -13,7 +13,7 @@
 
 ## Iniciando o projeto
 
-- Com todas as dependências baixadas e o servidor json incializado, utilize `npm start` para iniciar o projeto, ele irá gerar um link localhost  ( http://localhost:3000 ), clique-o para ser redirecionado ao seu browser com o site funcionando perfeitamente.
+- Com todas as dependências baixadas e o servidor json incializado, utilize `npm start` para iniciar o projeto, ele irá gerar um link localhost    ( http://localhost:3000 ), clique-o para ser redirecionado ao seu browser com o site funcionando perfeitamente.
 
 **PROJETO INICIALIZADO!**
 
